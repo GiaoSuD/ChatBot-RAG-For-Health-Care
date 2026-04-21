@@ -64,4 +64,6 @@ To change HuggingFace cache location, set HF_HOME in vector.py.
 
 ## Author
 
-Your Name or Nickname – 2024
+GiaoSuD-2026
+## P/S
+This ChatBot can make mistake, check carefully before using the infomation it gened
