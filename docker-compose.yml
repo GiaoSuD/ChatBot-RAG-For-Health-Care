@@ -1,0 +1,25 @@
+services:
+  # 1. DATABASE (PostgreSQL) - Giữ lại để quản lý dữ liệu chuyên nghiệp
+  postgres_db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: chatbot_user
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: chatbot_db
+    ports:
+      - "5432:5432" # Rất quan trọng: Mở cổng để Backend ở ngoài máy thật chui vào được
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    restart: always
+
+  # 2. FRONTEND (React)
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      # Vẫn trỏ về localhost:8000 vì trình duyệt của bạn chạy trên máy thật
+      - VITE_API_URL=http://localhost:8000
+
+volumes:
+  pg_data:

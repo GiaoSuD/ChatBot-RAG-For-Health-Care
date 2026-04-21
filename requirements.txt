@@ -1,0 +1,12 @@
+langchain
+langchain-community
+langchain-core
+langchain-chroma
+pandas
+fastapi
+uvicorn
+pydantic
+langchain_ollama
+argostranslate
+sqlalchemy
+psycopg2-binary

@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+chroma_medical_db/
+pg_data/
+.env
+.DS_Store
